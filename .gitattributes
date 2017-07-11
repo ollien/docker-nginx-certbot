@@ -1,0 +1,2 @@
+# Supervisor configs have no language
+supervisord/* lingust-vendored
