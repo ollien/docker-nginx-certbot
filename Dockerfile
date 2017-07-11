@@ -2,7 +2,8 @@ FROM xqdocker/ubuntu-nginx
 MAINTAINER Nick Krichevsky<nick@ollien.com>
 
 RUN add-apt-repository ppa:certbot/certbot
-RUN apt-get update && apt-get install -y python-certbot-nginx supervisor
+RUN apt-get update && apt-get install -y python-certbot-nginx supervisor cron
+RUN echo "0 0 * * SUN root certbot renew" > /etc/cron.d/crontab
 RUN rm /etc/nginx/conf.d/default.conf
 COPY certbot-config.json /certbot-config.json
 COPY certbot.py /certbot.py
