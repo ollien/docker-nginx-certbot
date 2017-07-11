@@ -5,7 +5,7 @@ A Docker container that runs certbot and nginx together in order to provide supp
 ## Installation
 1. Pull the container from Docker Hub.
 
-	`docker pull ollien:nginx-certbot`
+	`docker pull ollien/nginx-certbot`
 2. Edit your `certbot-config.json` according to the configuration guidelines below.
 
 3. Start the Docker container.
