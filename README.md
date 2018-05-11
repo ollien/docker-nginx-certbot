@@ -12,12 +12,12 @@ A Docker container that runs certbot and nginx together in order to provide supp
 3. Start the Docker container.
 
 	````
-		docker run \
-		-v /path/to/nginx0config:/etc/nginx/conf.d/default.conf \
-		-v /path/to/certbot-config.json:/certbot-config.json \
-		-p 80:80 \
-		-p 443:443 \
-		ollien:nginx-certbot
+	docker run \
+	-v /path/to/nginx0config:/etc/nginx/conf.d/default.conf \
+	-v /path/to/certbot-config.json:/certbot-config.json \
+	-p 80:80 \
+	-p 443:443 \
+	ollien:nginx-certbot
 	````
 
 
