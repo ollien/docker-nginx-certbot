@@ -14,7 +14,7 @@ def run():
     domains = config["domains"]
     domain_args = [component for domain in domains
                    for component in ("-d", domain)]
-    extra_args = ["--non-interactive", "--nginx"]
+    extra_args = ["--non-interactive", "--nginx", "--expand"]
 
     if "account_id" in config and "email" not in config:
         extra_args.append("--account")
